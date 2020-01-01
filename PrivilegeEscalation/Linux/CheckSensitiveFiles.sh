@@ -4,7 +4,8 @@
 # Author: tdkmp4n4
 # Description: This script checks for some sensitive files under actual directory. Make sure you are in the right path before launching it
 
-echo -e "\n"
+
+echo -e "\e[0m\n"
 
 echo -e "\e[1m·········································································································"
 echo -e "·········································································································"
@@ -25,19 +26,27 @@ echo -e "···································�
 
 echo -e "\e[0m\n"
 
-echo -e "\e[34m[+] Checking files with word -pass- in name\e[0m"
+echo -e "\e[1m\e[32m[+] Enumerating from this location\e[0m"
+pwd
+echo -e "\e[0m\n"
+
+echo -e "\e[1m\e[32m[+] Checking files with word -pass- in name\e[0m"
 find . -type f -iname "*pass*" 2>/dev/null
-echo -e "\n"
+echo -e "\e[0m\n"
 
-echo -e "\e[34m[+] Checking files with word -contraseña- in name\e[0m"
+echo -e "\e[1m\e[32m[+] Checking files with word -contraseña- in name\e[0m"
 find . -type f -iname "*contraseña*" 2>/dev/null
-echo -e "\n"
+echo -e "\e[0m\n"
 
-echo -e "\e[34m[+] Checking files with word -secret- in name\e[0m"
+echo -e "\e[1m\e[32m[+] Checking files with word -secret- in name\e[0m"
 find . -type f -iname "*secret*" 2>/dev/null
-echo -e "\n"
+echo -e "\e[0m\n"
 
-echo -e "\e[34m[+] Checking files with word -database- in name\e[0m"
+echo -e "\e[1m\e[32m[+] Checking files with word -database- in name\e[0m"
 find . -type f -iname "*database*" 2>/dev/null
-echo -e "\n"
+echo -e "\e[0m\n"
 
+echo -e "\e[1m\e[32m[+] Checking directory /var/local content\e[0m"
+ls -la /var/local
+
+echo -e "\e[0m\n"
