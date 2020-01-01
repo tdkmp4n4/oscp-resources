@@ -25,10 +25,6 @@ echo -e "···································�
 
 echo -e "\e[0m\n"
 
-echo -e "\e[34m[+] Checking files with word -password- in name\e[0m"
-find . -type f -iname "*password*" 2>/dev/null
-echo -e "\n"
-
 echo -e "\e[34m[+] Checking files with word -pass- in name\e[0m"
 find . -type f -iname "*pass*" 2>/dev/null
 echo -e "\n"
@@ -40,3 +36,8 @@ echo -e "\n"
 echo -e "\e[34m[+] Checking files with word -secret- in name\e[0m"
 find . -type f -iname "*secret*" 2>/dev/null
 echo -e "\n"
+
+echo -e "\e[34m[+] Checking files with word -database- in name\e[0m"
+find . -type f -iname "*database*" 2>/dev/null
+echo -e "\n"
+
