@@ -48,8 +48,10 @@ echo -e "\e[0m\n"
 
 echo -e "\e[1m\e[32m[+] Checking directory /var/local content\e[0m"
 ls -la /var/local
+echo -e "\e[0m\n"
 
 echo -e "\e[1m\e[32m[+] Checking directory /var/backups content\e[0m"
 ls -la /var/backups
+echo -e "\e[0m\n"
 
 echo -e "\e[0m\n"
