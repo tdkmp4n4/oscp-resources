@@ -54,4 +54,8 @@ echo -e "\e[1m\e[32m[+] Checking directory /var/backups content\e[0m"
 ls -la /var/backups
 echo -e "\e[0m\n"
 
+echo -e "\e[1m\e[32m[+] Checking file /etc/passwd permissions\e[0m"
+ls -la /etc/passwd
+echo -e "\e[0m\n"
+
 echo -e "\e[0m\n"
