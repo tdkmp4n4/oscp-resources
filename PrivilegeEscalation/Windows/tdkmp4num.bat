@@ -140,7 +140,7 @@ for %%i in (powershell.exe) do if "%%~$path:i"=="" (
 	echo.
 	echo.
 	echo [+] Enumerating processes and owner
-	powershell.exe -Command "Get-WmiObject Win32_Process | Select Name, @{Name="UserName";Expression={$_.GetOwner().Domain+"\"+$_.GetOwner().User}} | Sort-Object UserName, Name"
+	powershell.exe -Command "Get-WmiObject Win32_Process | Select Name, @{Name='UserName';Expression={$_.GetOwner().Domain+'\'+$_.GetOwner().User}} | Sort-Object UserName, Name"
 	echo.
 	echo.
 	echo [+] Enumerating installed applications and patch levels
