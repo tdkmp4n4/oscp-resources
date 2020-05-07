@@ -55,6 +55,11 @@ for %%i in (powershell.exe) do if "%%~$path:i"=="" (
 	schtasks /query /fo LIST | findstr TaskName
 	echo.
 	echo.
+	echo [+] Enumerating processes and owner
+	echo.
+	tasklist /V
+	echo.
+	echo.
 	echo [+] Enumerating installed applications and patch levels
 	echo.
 	wmic product get name,version,vendor
@@ -132,6 +137,10 @@ for %%i in (powershell.exe) do if "%%~$path:i"=="" (
 	echo [+] Enumerating scheduled tasks
 	echo.
 	schtasks /query /fo LIST | findstr TaskName
+	echo.
+	echo.
+	echo [+] Enumerating processes and owner
+	powershell.exe -Command "Get-WmiObject Win32_Process | Select Name, @{Name="UserName";Expression={$_.GetOwner().Domain+"\"+$_.GetOwner().User}} | Sort-Object UserName, Name"
 	echo.
 	echo.
 	echo [+] Enumerating installed applications and patch levels
